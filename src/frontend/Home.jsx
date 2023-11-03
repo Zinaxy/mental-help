@@ -5,7 +5,10 @@ import Testmonial from "../components/front/Testmonial";
 
 const Home = () => {
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
+    <section
+      id='home-page'
+      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+    >
       {/* hero section */}
       <Hero />
       {/* introduction notes */}
@@ -24,7 +27,7 @@ const Home = () => {
       <div className=''>
         <CTA />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ const TopNav = () => {
             <ul className='decoration none list-none flex justify-between text-center space-x-4'>
               <li className='text-white font-bold text-1xl  divide-r-2'>
                 <h4 className='text-white flex items-center'>
-                  <BiMobileAlt size={20} className='mr-1' /> 07844563727535 |
+                  <BiMobileAlt size={20} className='mr-1' /> +1 (205) 947-7532 |
                 </h4>
               </li>
               <li className='text-white font-bold text-1xl  divide-r-2'>

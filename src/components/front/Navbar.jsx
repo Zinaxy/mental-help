@@ -27,8 +27,8 @@ const Navbar = () => {
       path: "/faq",
     },
     {
-      name: "Story",
-      path: "/about-us",
+      name: "Stories",
+      path: "/stories",
     },
     {
       name: "Services",
@@ -40,21 +40,24 @@ const Navbar = () => {
     },
     {
       name: "Contact Us",
-      path: "/about-us",
+      path: "/contact-us",
     },
   ];
   return (
     <Flowbite>
-      <nav className='bg-white border-gray-200 dark:bg-gray-900 shadow-xl'>
+      <nav
+        id='navigation'
+        className='bg-white border-gray-200 dark:bg-gray-900 shadow-2xl shadow-primary'
+      >
         <TopNav />
         <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-          <Link to='#' className='flex items-center'>
+          <Link to='/' className='flex items-center'>
             <img
               src={head}
               className='h-6 lg:h-10 mr-3'
               alt='Mental Healthy Logo'
             />
-            <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
+            <span className='self-center text-lg md:text-2xl font-semibold whitespace-nowrap dark:text-white'>
               MentalHealthy.org
             </span>
           </Link>
@@ -102,16 +105,15 @@ const Navbar = () => {
           >
             <TopNav />
             <div className='flex justify-between items-center mt-4 mx-4'>
-              <Link
-                to='#'
-                className='flex justify-between items-center w-full text-3xl'
-              >
-                {" "}
+              <Link to='#' className='flex items-center'>
                 <img
-                  src={logo}
-                  className='h-10 mr-3'
-                  alt='Mental healthy Logo'
+                  src={head}
+                  className='h-6 lg:h-10 mr-3'
+                  alt='Mental Healthy Logo'
                 />
+                <span className='self-center text-lg md:text-2xl font-semibold whitespace-nowrap dark:text-white'>
+                  MentalHealthy.org
+                </span>
               </Link>
 
               <span

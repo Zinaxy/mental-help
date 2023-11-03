@@ -22,6 +22,14 @@ const Appointment = () => {
       time: "08:00pm - 09:00pm (GMT)",
       date: "15 Dec",
     },
+    {
+      id: 2,
+      title: "Online Zoom",
+      description:
+        "Go to this step by step guideline process on how to certify for your weekly benefits:",
+      time: "08:00pm - 09:00pm (GMT)",
+      date: "30 Dec",
+    },
   ];
   const veryAppointments = [
     {
@@ -76,7 +84,11 @@ const Appointment = () => {
     },
   ];
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
+    /* appointments section */
+    <section
+      id='appointments'
+      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+    >
       {/* bread crupm */}
       <BreadCrump title='Your Appointments' />
       {/* register btn */}
@@ -88,9 +100,9 @@ const Appointment = () => {
               <div className='flex flex-col'>
                 <div className='border-b-2 border-primary text-start mx-6 md:m-0'>
                   <h1 className='flex font-poppins font-bold text-3xl text-slate-800 dark:text-gray-200 mb-4 items-center'>
-                    New
+                    Your Next
                     <span className='hidden md:flex ml-3'> Appointments</span>
-                    <span class='bg-primary text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
+                    <span className='bg-primary text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
                       waiting
                       <BiLoader size={20} className='text-white ml-2' />
                     </span>
@@ -108,12 +120,12 @@ const Appointment = () => {
                   );
                 })}
               </div>
-              <div className='flex flex-col'>
+              {/* <div className='flex flex-col'>
                 <div className='border-b-2 border-primary text-start mx-6 md:m-0'>
                   <h1 className='flex font-poppins font-bold text-3xl text-slate-800 dark:text-gray-200 mb-4'>
                     Verified{" "}
                     <span className='hidden md:flex ml-3'> Appointments</span>
-                    <span class='bg-green-600 text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
+                    <span className='bg-green-600 text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
                       Verified
                       <AiFillCheckCircle
                         size={20}
@@ -139,7 +151,7 @@ const Appointment = () => {
                   <h1 className='flex font-poppins font-bold text-3xl text-slate-800 dark:text-gray-200 mb-4'>
                     Due{" "}
                     <span className='hidden md:flex ml-3'> Appointments</span>
-                    <span class='bg-rose-600 text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
+                    <span className='bg-rose-600 text-white  text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded ml-16 borde'>
                       Due/attended
                       <BiUnlink size={20} className='text-white ml-2' />
                     </span>
@@ -156,12 +168,12 @@ const Appointment = () => {
                     />
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

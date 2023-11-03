@@ -6,51 +6,33 @@ const FAQ = () => {
     {
       id: 1,
       title: "What is mental health? ",
-      content: (
-        <p className='text-start'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
-          inventore optio esse enim perferendis consequuntur eos accusantium a
-          nihil perspiciatis.
-        </p>
-      ),
+      content:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis inventore optio esse enim perferendis consequuntur eos accusantium a nihil perspiciatis.",
     },
     {
       id: 2,
       title: "What do I do if the support doesn't help?",
-      content: (
-        <p className='text-start'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-          obcaecati minus quibusdam dolorem, odit, totam nisi aliquam debitis
-          temporibus aperiam cupiditate earum voluptate alias incidunt.
-        </p>
-      ),
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit obcaecati minus quibusdam dolorem, odit, totam nisi aliquam debitis temporibus aperiam te earum voluptate alias incidunt.",
     },
     {
       id: 3,
       title: "Can you prevent mental health problems?",
-      content: (
-        <p className='text-start'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          aspernatur saepe deleniti illum minus labore animi repudiandae laborum
-          quas! Accusamus dolore veniam ab nobis at, animi blanditiis qui
-          voluptatem eius.
-        </p>
-      ),
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aspernatur saepe deleniti illum minus labore animi repudiandae laborum quas! s dolore veniam ab nobis at, animi blanditiis qui voluptatem eius.",
     },
     {
       id: 4,
       title: "What causes mental health problems?",
-      content: (
-        <p className='text-start'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
-          amet sed earum odio iusto nobis culpa doloremque tempore vero
-          quibusdam.
-        </p>
-      ),
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis amet sed earum odio iusto nobis culpa doloremque tempore vero quibusdam.",
     },
   ];
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
+    <section
+      id='frequently-asked-questions'
+      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+    >
       {/* bread crupm */}
       <BreadCrump title='Frequently Asked Questions' />
       {/* register btn */}
@@ -63,6 +45,7 @@ const FAQ = () => {
               {accordionData.map((accdata) => {
                 return (
                   <FaqCard
+                    key={accdata.id}
                     title={accdata.title}
                     textbody={accdata.content}
                     id={accdata.id}
@@ -73,7 +56,7 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,6 +8,9 @@ import FAQ from "../frontend/FAQ";
 import Services from "../frontend/Services";
 import About from "../frontend/About";
 import AppointmentCreate from "../frontend/AppointmentCreate";
+import Contact from "../frontend/Contact";
+import SingleService from "../frontend/SingleService";
+import Stories from "../frontend/Stories";
 
 const MyRouter = () => {
   return (
@@ -21,6 +24,9 @@ const MyRouter = () => {
       <Route path='/faq' element={<FAQ />} />
       <Route path='/services' element={<Services />} />
       <Route path='/about-us' element={<About />} />
+      <Route path='/contact-us' element={<Contact />} />
+      <Route path='/service' element={<SingleService />} />
+      <Route path='/stories' element={<Stories />} />
     </Routes>
   );
 };

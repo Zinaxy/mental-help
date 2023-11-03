@@ -1,9 +1,17 @@
 import React from "react";
 import BreadCrump from "../components/front/BreadCrump";
+import { ToastAlert } from "../components";
 
 const AppointmentCreate = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return <ToastAlert />;
+  };
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
+    <section
+      id='booking'
+      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+    >
       {/* bread crupm */}
       <BreadCrump title='Make an Appointment' />
       {/* register btn */}
@@ -15,7 +23,7 @@ const AppointmentCreate = () => {
           <div className='flex flex-col justify-between items-center text-center'>
             {/* form */}
             <div className='flex flex-col justify-center w-full md:w-4/12 mb-16'>
-              <form action=''>
+              <form onSubmit={handleSubmit}>
                 <div className='text-start m-3'>
                   <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                     Phone Number
@@ -41,7 +49,11 @@ const AppointmentCreate = () => {
                       id='service'
                       className='block w-full px-3 py-2 bg-transparent dark:bg-gray-900 dark:text-gray-300 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     >
-                      <option value='' disabled selected>
+                      <option
+                        value=''
+                        disabled
+                        defaultValue={"CHOOSE YOUR SERVICE"}
+                      >
                         CHOOSE YOUR SERVICE
                       </option>
                       <option value='Consultation'>Consultation</option>
@@ -49,9 +61,9 @@ const AppointmentCreate = () => {
                     </select>
                   </div>
                 </div>
-                <div className='text-start m-3'>
-                  <div className='md:flex space-x-4'>
-                    <div className='w-full md:w-6/12'>
+                {/*  <div className='text-start m-3'>
+                  <div className='lg:flex space-x-4'>
+                    <div className='w-full lg:w-6/12'>
                       <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                         Date
                       </label>
@@ -65,22 +77,38 @@ const AppointmentCreate = () => {
                         />
                       </div>
                     </div>
-                    <div className='w-full md:w-6/12'>
-                      <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
-                        Time
-                      </label>
-                      <div className='mt-1'>
-                        <input
-                          type='time'
-                          name='time'
-                          id='time'
-                          required
-                          className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
-                        />
+                    <div className='flex gap-4 w-full lg:w-6/12 mt-3'>
+                      <div className='w-full'>
+                        <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                          Time From
+                        </label>
+                        <div className='mt-1'>
+                          <input
+                            type='time'
+                            name='time'
+                            id='time'
+                            required
+                            className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
+                          />
+                        </div>
+                      </div>
+                      <div className='w-full'>
+                        <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                          Time To
+                        </label>
+                        <div className='mt-1'>
+                          <input
+                            type='time'
+                            name='time'
+                            id='time'
+                            required
+                            className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className='text-start m-3'>
                   <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                     Description
@@ -111,7 +139,7 @@ const AppointmentCreate = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

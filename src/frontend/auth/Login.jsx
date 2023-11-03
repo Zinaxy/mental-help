@@ -3,6 +3,7 @@ import BreadCrump from "../../components/front/BreadCrump";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
+import { ButtonSubmit, InputText } from "../../components";
 
 const Login = () => {
   return (
@@ -19,7 +20,7 @@ const Login = () => {
             <div className='md:flex justify-center items-center my-6'>
               <Link
                 to=''
-                class='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-4 mb-2'
+                className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-4 mb-2'
               >
                 <FcGoogle size={20} className='mr-6' /> Sign In with Google
               </Link>
@@ -28,7 +29,7 @@ const Login = () => {
               <br className='md:hidden' />
               <Link
                 to='#'
-                class='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2'
+                className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2'
               >
                 <FaFacebookF size={20} className='mr-6 text-sky-700' /> Sign In
                 with Facebook
@@ -51,13 +52,12 @@ const Login = () => {
                     Email
                   </label>
                   <div className='mt-1'>
-                    <input
+                    <InputText
                       type='email'
                       name='email'
                       id='email'
                       autoComplete='email'
                       required
-                      className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     />
                   </div>
                 </div>
@@ -66,29 +66,23 @@ const Login = () => {
                     Password
                   </label>
                   <div className='mt-1'>
-                    <input
+                    <InputText
                       type='password'
                       name='password'
                       id='password'
                       autoComplete='password'
                       required
-                      className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     />
                   </div>
                 </div>
                 <div className='flex items-center m-1'>
                   <div className='text-center m-3'>
-                    <button
-                      type='submit'
-                      className='inline-flex items-center px-4 py-2 bg-primary border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-primary active:bg-primary focus:outline-none focus:border-primary focus:ring ring-primary disabled:opacity-25 transition ease-in-out duration-150'
-                    >
-                      Sign In Account
-                    </button>
+                    <ButtonSubmit title='Sign In Account' />
                   </div>
                   <div className='text-center m-3'>
                     <Link
                       to='/register'
-                      class='text-sm font-medium text-gray-900 dark:text-gray-300'
+                      className='text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       Not Registered?{" "}
                       <span className='underline'>Register</span>

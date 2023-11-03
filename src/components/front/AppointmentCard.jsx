@@ -5,9 +5,9 @@ import { BiTime } from "react-icons/bi";
 
 const AppointmentCard = (props) => {
   return (
-    <div>
+    <section id='about-us'>
       {/* single category */}
-      <div className='flex justify-center items-center w-full m-4'>
+      <div className='flex justify-center items-center w-full m-4 hover:shadow-lg'>
         <div className='mx-3 bg-primary px-3 py-2 uppercase'>
           <h1 className='font-bold text-2xl font-serif text-white'>
             {props.date}
@@ -28,7 +28,7 @@ const AppointmentCard = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

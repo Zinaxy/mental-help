@@ -8,7 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div>
+    <section id='about-us'>
       <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
         {/* bread crupm */}
         <BreadCrump title='About Us' />
@@ -177,7 +177,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

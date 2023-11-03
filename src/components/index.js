@@ -8,6 +8,10 @@ import Loader from "./Loader";
 import Service from "./front/Service";
 import AppointmentCard from "./front/AppointmentCard";
 import FaqCard from "./front/FaqCard";
+import InputText from "./InputText";
+import ButtonSubmit from "./ButtonSubmit";
+import ToastAlert from "./ToastAlert";
+import Story from "./front/Story";
 
 import BreadCrump from "./front/BreadCrump";
 export {
@@ -22,4 +26,8 @@ export {
   AppointmentCard,
   FaqCard,
   BreadCrump,
+  InputText,
+  ButtonSubmit,
+  ToastAlert,
+  Story,
 };

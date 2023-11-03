@@ -3,6 +3,7 @@ import BreadCrump from "../../components/front/BreadCrump";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
+import { InputText } from "../../components";
 
 const Register = () => {
   const [checked, isChecked] = useState(false);
@@ -23,7 +24,7 @@ const Register = () => {
             <div className='md:flex justify-center items-center my-6'>
               <Link
                 to=''
-                class='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-4 mb-2'
+                className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-4 mb-2'
               >
                 <FcGoogle size={20} className='mr-6' /> Sign Up with Google
               </Link>
@@ -32,7 +33,7 @@ const Register = () => {
               <br className='md:hidden' />
               <Link
                 to='#'
-                class='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2'
+                className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2'
               >
                 <FaFacebookF size={20} className='mr-6 text-sky-700' /> Sign Up
                 with Facebook
@@ -55,13 +56,12 @@ const Register = () => {
                     Full Name
                   </label>
                   <div className='mt-1'>
-                    <input
+                    <InputText
                       type='text'
                       name='fulltName'
                       id='fulltName'
                       autoComplete='given-name'
                       required
-                      className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     />
                   </div>
                 </div>
@@ -70,13 +70,12 @@ const Register = () => {
                     Email
                   </label>
                   <div className='mt-1'>
-                    <input
+                    <InputText
                       type='email'
                       name='email'
                       id='email'
                       autoComplete='email'
                       required
-                      className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     />
                   </div>
                 </div>
@@ -85,33 +84,32 @@ const Register = () => {
                     Password
                   </label>
                   <div className='mt-1'>
-                    <input
+                    <InputText
                       type='password'
                       name='password'
                       id='password'
                       autoComplete='password'
                       required
-                      className='block w-full px-3 py-2 bg-transparent border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm'
                     />
                   </div>
                 </div>
                 <div className='text-start m-3'>
-                  <div class='flex items-center'>
+                  <div className='flex items-center'>
                     <input
                       id='link-checkbox'
                       type='checkbox'
                       value={checked}
                       onChange={handleCheck}
-                      class='w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+                      className='w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
                     />
                     <label
                       for='link-checkbox'
-                      class='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
+                      className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       I agree with the{" "}
                       <a
                         href='#'
-                        class='text-primary dark:text-primary hover:underline'
+                        className='text-primary dark:text-primary hover:underline'
                       >
                         terms and conditions
                       </a>
@@ -135,7 +133,7 @@ const Register = () => {
                   <div className='text-center m-3'>
                     <Link
                       to='/login'
-                      class='text-sm font-medium text-gray-900 dark:text-gray-300'
+                      className='text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       Already Registered?{" "}
                       <span className='underline'>Login</span>

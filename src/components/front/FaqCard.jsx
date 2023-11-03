@@ -15,8 +15,8 @@ const FaqCard = (props) => {
           {props.title}
         </Accordion.Title>
         <Accordion.Content>
-          <p className='mb-2 text-gray-500 dark:text-gray-400'>
-            <p>{props.textbody}</p>
+          <p className='mb-2 text-gray-500 dark:text-gray-400 text-start'>
+            {props.textbody}
           </p>
         </Accordion.Content>
       </Accordion.Panel>

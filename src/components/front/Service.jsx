@@ -3,7 +3,10 @@ import { bg2 } from "../../assets";
 
 const Service = (props) => {
   return (
-    <div className='flex flex-col md:flex-row justify-center items-center text-center'>
+    <div
+      id='service'
+      className='flex flex-col md:flex-row justify-center items-center text-center'
+    >
       <div className='border-1 border-gray-200 shadow rounded-xl dark:bg-gray-800'>
         <div className='p-6 space-y-4'>
           <img src={bg2} alt='' className='w-full m-0 max-h-[12rem]' />
@@ -13,7 +16,9 @@ const Service = (props) => {
           <span className='text-white dark:text-gray-800 border-b-2 border-primary mt-0'>
             ............
           </span>
-          <p className='text-gray-600 dark:text-gray-400'>{props.body}</p>
+          <p className='text-gray-600 dark:text-gray-400 text-start'>
+            {props.body}
+          </p>
           <div className=''>
             <a
               href={props.link}
