@@ -99,7 +99,7 @@ const Navbar = () => {
           <div
             className={
               !nav
-                ? "fixed bg-white border-gray-200 dark:bg-gray-900 shadow-xl left-0 top-0 right-0 w-full h-full ease-in-out duration-500"
+                ? "fixed bg-white border-gray-200 dark:bg-gray-900 shadow-xl left-0 top-0 right-0 w-full h-full ease-in-out duration-500 z-10"
                 : "fixed hidden"
             }
           >
