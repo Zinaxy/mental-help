@@ -31,12 +31,12 @@ const FAQ = () => {
   return (
     <section
       id='frequently-asked-questions'
-      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+      className='text-center items-center dark:bg-gray-900 dark:text-gray-100'
     >
       {/* bread crupm */}
       <BreadCrump title='Frequently Asked Questions' />
       {/* register btn */}
-      <div className='flex justify-center text-center mt-10 dark:bg-slate-900'>
+      <div className='flex justify-center text-center mt-10 dark:bg-gray-900'>
         <div className='text-center w-full'>
           <div className='flex flex-col justify-between items-center text-center'>
             {/* form */}

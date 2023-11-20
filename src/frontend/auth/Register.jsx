@@ -11,11 +11,8 @@ const Register = () => {
     isChecked(!checked);
   };
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
-      {/* bread crupm */}
-      <BreadCrump title='Register New Account' />
-      {/* register btn */}
-      <div className='flex justify-center text-center mt-10 dark:bg-slate-900'>
+    <div className='lg:flex'>
+      <div className='flex justify-center items-center text-center mt-10 lg:mt-0 lg:w-6/12 dark:bg-slate-900'>
         <div className='text-center w-full'>
           <h1 className='font-poppins font-bold text-3xl text-slate-800 dark:text-gray-200'>
             Create your Free Acount
@@ -49,10 +46,13 @@ const Register = () => {
               </span>
             </div>
             {/* form */}
-            <div className='flex flex-col justify-center w-full md:w-4/12 mb-16'>
+            <div className='flex flex-col justify-center w-full md:w-8/12 mb-16'>
               <form action=''>
                 <div className='text-start m-3'>
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                  <label
+                    htmlFor='name'
+                    className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                  >
                     Full Name
                   </label>
                   <div className='mt-1'>
@@ -66,7 +66,10 @@ const Register = () => {
                   </div>
                 </div>
                 <div className='text-start m-3'>
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                  <label
+                    htmlFor='email'
+                    className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                  >
                     Email
                   </label>
                   <div className='mt-1'>
@@ -80,7 +83,10 @@ const Register = () => {
                   </div>
                 </div>
                 <div className='text-start m-3'>
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                  <label
+                    htmlFor='password'
+                    className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                  >
                     Password
                   </label>
                   <div className='mt-1'>
@@ -103,7 +109,7 @@ const Register = () => {
                       className='w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
                     />
                     <label
-                      for='link-checkbox'
+                      htmlFor='link-checkbox'
                       className='ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       I agree with the{" "}
@@ -117,14 +123,14 @@ const Register = () => {
                     </label>
                   </div>
                 </div>
-                <div className='flex items-center m-1'>
+                <div className='md:flex items-center m-1'>
                   <div className='text-center m-3'>
                     <button
                       type={!checked ? "button" : "submit"}
                       className={
                         !checked
-                          ? "inline-flex items-center px-4 py-2 bg-gray-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-500 disabled:opacity-25 transition ease-in-out duration-150"
-                          : "inline-flex items-center px-4 py-2 bg-primary border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-primary active:bg-primary focus:outline-none focus:border-primary focus:ring ring-primary disabled:opacity-25 transition ease-in-out duration-150"
+                          ? "w-full text-center items-center px-4 py-4 lg:py-2 bg-gray-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-500 active:bg-gray-500 focus:outline-none focus:border-gray-500 focus:ring ring-gray-500 disabled:opacity-25 transition ease-in-out duration-150"
+                          : "w-full text-center items-center px-4 py-4 lg:py-2 bg-primary border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-primary active:bg-primary focus:outline-none focus:border-primary focus:ring ring-primary disabled:opacity-25 transition ease-in-out duration-150"
                       }
                     >
                       Create Account
@@ -133,7 +139,7 @@ const Register = () => {
                   <div className='text-center m-3'>
                     <Link
                       to='/login'
-                      className='text-sm font-medium text-gray-900 dark:text-gray-300'
+                      className='text-1xl lg:text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       Already Registered?{" "}
                       <span className='underline'>Login</span>
@@ -145,6 +151,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <div className='hidden lg:block w-6/12 bg-primary h-screen'></div>
     </div>
   );
 };

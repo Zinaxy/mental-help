@@ -1,13 +1,12 @@
 import React from "react";
 import { CTA, Hero, IntroService, Loader } from "../components";
 import InfoGuide from "../components/front/InfoGuide";
-import Testmonial from "../components/front/Testmonial";
 
 const Home = () => {
   return (
     <section
       id='home-page'
-      className='text-center items-center dark:bg-gray-900 dark:text-slate-100'
+      className='text-center items-center dark:bg-gray-900 dark:text-slate-200'
     >
       {/* hero section */}
       <Hero />
@@ -16,7 +15,7 @@ const Home = () => {
         <IntroService />
       </div>
       {/* information and guidence */}
-      <div className=' bg-gray-100 dark:bg-slate-900'>
+      <div className=' bg-gray-100 dark:bg-gray-800'>
         <InfoGuide />
       </div>
       {/* Testmonials */}

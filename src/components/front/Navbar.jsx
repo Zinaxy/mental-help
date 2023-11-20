@@ -68,13 +68,13 @@ const Navbar = () => {
             >
               Sign Up
             </Link>
+            <DarkThemeToggle className='text-2xl text-gray-900 dark:text-white' />
             <span
               onClick={handleNav}
               className='md:hidden text-slate-800 dark:text-slate-50 w-8 cursor-pointer mr-3'
             >
               {!nav ? <TfiClose size={40} /> : <RiMenu3Fill size={40} />}
             </span>
-            <DarkThemeToggle className='text-gray-900 dark:text-white' />
           </div>
           <div
             className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
@@ -99,7 +99,7 @@ const Navbar = () => {
           <div
             className={
               !nav
-                ? "fixed bg-white border-gray-200 dark:bg-gray-900 shadow-xl left-0 top-0 right-0 w-full h-full ease-in-out duration-500 z-10"
+                ? "fixed bg-white border-gray-200 dark:bg-gray-900 shadow-xl left-0 top-0 right-0 w-full ease-in-out duration-500 z-10"
                 : "fixed hidden"
             }
           >
@@ -120,19 +120,20 @@ const Navbar = () => {
                 onClick={handleNav}
                 className='text-slate-800 dark:text-slate-50 w-8 cursor-pointer mr-3'
               >
-                {!nav ? <TfiClose size={40} /> : <RiMenu3Fill size={40} />}
+                {!nav ? (
+                  <TfiClose size={30} className='font-bold' />
+                ) : (
+                  <RiMenu3Fill size={40} />
+                )}
               </span>
             </div>
-            <ul className='uppercase px-4 m-6 font-bold text-md dark:text-white'>
+            <ul className='uppercase px-4 m-6 font-bold text-sm dark:text-white text-center'>
               {navLinks.map((linkItem) => {
                 return (
-                  <li
-                    key={linkItem.name}
-                    className='p-3 border-b border-slate-200'
-                  >
+                  <li key={linkItem.name} className='p-2 text-center'>
                     <Link
                       to={linkItem.path}
-                      className='flex justify-start items-center hover:border-2 border-primary rounded-full hover:text-center px-5 py-2.5'
+                      className='flex justify-start items-center hover:text-primary rounded-full hover:text-center tracking-wide  leading-6'
                       onClick={handleNav}
                     >
                       {linkItem.name}

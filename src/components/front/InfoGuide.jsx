@@ -25,10 +25,10 @@ const InfoGuide = () => {
   return (
     <section className='flex justify-center  mt-10'>
       <div className='xl:max-w-[1280px] w-full my-10'>
-        <h1 className='text-4xl mt-2 font-bold font-poppins text-slate-700 dark:text-white m-4'>
+        <h1 className='text-4xl mt-2 font-bold font-poppins text-gray-700 dark:text-white m-4'>
           Information & Guidence
         </h1>
-        <span className='text-gray-100 dark:text-slate-900 border-b-4 border-primary'>
+        <span className='text-gray-100 dark:text-gray-800 border-b-4 border-primary'>
           .................................
         </span>
         <div className='md:flex justify-center items-center m-10 gap-6 w-full'>
@@ -40,10 +40,10 @@ const InfoGuide = () => {
               >
                 <div className='flex flex-col gap-4'>
                   <div className=''>
-                    <h1 className='text-2xl font-bold capitalize text-slate-800 dark:text-slate-200'>
+                    <h1 className='text-2xl font-bold capitalize text-gray-800 dark:text-gray-200'>
                       {info.title}
                     </h1>
-                    <p className='text-lg text-slate-600 dark:text-slate-400 m-6 '>
+                    <p className='text-lg text-gray-600 dark:text-gray-400 m-6 '>
                       {info.body}
                     </p>
                   </div>

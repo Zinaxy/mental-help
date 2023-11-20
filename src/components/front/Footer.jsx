@@ -5,7 +5,7 @@ import { BiEnvelope } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <footer className='bg-white dark:bg-gray-900 shadow-2xl mt-10 shadow-primary'>
+    <footer className='bg-white dark:bg-gray-900 shadow-2xl mt-10 shadow-gray-800'>
       <div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
         <div className='md:flex md:justify-between'>
           <div className='w-4/12 mb-6 md:mb-0'>

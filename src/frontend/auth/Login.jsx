@@ -7,14 +7,11 @@ import { ButtonSubmit, InputText } from "../../components";
 
 const Login = () => {
   return (
-    <div className='text-center items-center dark:bg-gray-900 dark:text-slate-100'>
-      {/* bread crupm */}
-      <BreadCrump title='Sign In Your Account' />
-      {/* register btn */}
-      <div className='flex justify-center text-center mt-10 dark:bg-slate-900'>
+    <div className='lg:flex'>
+      <div className='flex justify-center items-center text-center mt-10 lg:mt-0 lg:w-6/12 dark:bg-slate-900'>
         <div className='text-center w-full'>
           <h1 className='font-poppins font-bold text-3xl text-slate-800 dark:text-gray-200'>
-            Sign In your Acount
+            Sign in to your Account
           </h1>
           <div className='flex flex-col justify-between items-center text-center'>
             <div className='md:flex justify-center items-center my-6'>
@@ -45,7 +42,7 @@ const Login = () => {
               </span>
             </div>
             {/* form */}
-            <div className='flex flex-col justify-center w-full md:w-4/12 mb-16'>
+            <div className='flex flex-col justify-center w-full md:w-8/12 mb-16'>
               <form action=''>
                 <div className='text-start m-3'>
                   <label className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
@@ -75,14 +72,14 @@ const Login = () => {
                     />
                   </div>
                 </div>
-                <div className='flex items-center m-1'>
+                <div className='lg:flex items-center mt-6'>
                   <div className='text-center m-3'>
-                    <ButtonSubmit title='Sign In Account' />
+                    <ButtonSubmit title='Sign in ' />
                   </div>
                   <div className='text-center m-3'>
                     <Link
                       to='/register'
-                      className='text-sm font-medium text-gray-900 dark:text-gray-300'
+                      className='text-1xl lg:text-sm font-medium text-gray-900 dark:text-gray-300'
                     >
                       Not Registered?{" "}
                       <span className='underline'>Register</span>
@@ -94,6 +91,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <div className='hidden lg:block w-6/12 bg-primary h-screen'></div>
     </div>
   );
 };

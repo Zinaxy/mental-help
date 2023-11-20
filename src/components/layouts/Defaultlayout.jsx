@@ -1,10 +1,8 @@
 import React from "react";
-import { Navbar, Footer } from "./components";
-import Home from "./frontend/Home";
-import MyRouter from "./router/router";
+import { Navbar, Footer } from "../index";
 import { Outlet } from "react-router-dom";
 
-const App = () => {
+const Defaultlayout = () => {
   return (
     <div className='bg-white dark:bg-gray-900 scroll-smooth'>
       <Navbar />
@@ -14,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Defaultlayout;
